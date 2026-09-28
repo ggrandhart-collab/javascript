@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- nilai teori 75
+    nilai Praktek minimal 80
+    kehadiran minimal 90%
+    tidak memiliki pelanggaran berat= true false
+    ketentuan jika rata rata > 90 maka lulus dengan predikat sangat baik
+    rata-rata >85 lulus dengan predkat baik selain itu lulus
+    nama tri adhy
+    rata-rata:81,5
+    status:lulus -->
+    <script>
+        let nama="Grand";
+        let nilai_teori=90;
+        let nilai_praktek=90;
+        let kehadiran = 90;
+        let pelanggaran_berat =false;
+
+        let rata_rata= (nilai_teori+nilai_praktek)/2;
+        // console.log(rata_rata);
+
+        let status= "";
+        let predikat="";
+        if (nilai_teori < 75 ) {
+            status="tidak lulus(Teori kurang)"; 
+        }else if(nilai_praktek <80){
+            status=" tidak lulus (praktek kurang)";
+        }else if (kehadiran <90) {
+            status="tidak lulus (kehadiran kurang)";
+        }else if(pelanggaran_berat == true ){
+            status="tidak lulus(pelanggaran disiplin)";
+        }
+        else{
+            status="lulus";
+
+            if (rata_rata >90) {
+                status="lulus dengan predikat sangat baik";
+            }else if(rata_rata >85) {
+                status="lulus dengan predikat baik";
+            }
+
+        }
+
+        console.log(`nama :${nama}`);
+        console.log(`rata-rata :${rata_rata}`);
+        console.log(`status :${status}`);
+        //Proses Menggunakan While
+        // if(rata_rata > 90 ) {
+        //     console.log("sangat baik");
+        // }if((rata_rata > 85) && (rata_rata < 89)){
+        //     console.log ("baik");
+        // }else{
+        //     console.log ("lulus");
+        // }
+
+        // //kehadiran dan pelanggaran
+        // if ( kehadiran > 90 ) {
+        //     console.log ("kehadiran kurang");
+        // }
+        // if ( pelanggaran_berat == true)
+        //     console.log("pelanggaran disiplin");
+        
+        // //output
+        // // let nama = "Grand";
+        // l
+        // console.log
+
+    </script>
+</body>
+</html>

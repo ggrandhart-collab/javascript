@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<script>
+    // let= nilai yang bisa di ubah, tapi tidak boleh di deklarasikan ulang
+    // var= sama dengan let
+    //const= nilainya tetap
+    let nama="Anton";
+    nama= "tes"
+    console.log(nama);
+    var alamat="bogor"
+    var alamat ="Jakarta"
+    console.log(alamat);  
+    const nilaiTetap = 10;
+    //const nilaiTetap = 10;
+    console.log(nilaiTetap)  
+    // Object dan immutabillity
+    // Object
+    const peserta = {
+            nama: "tono"
+    };
+    peserta.alamat = "KP. Sawah"
+    console.log(peserta);
+    //immutability : membuat Object baru menggunakan spred operator (...)
+    const pesertaBaru={...peserta, nim:"343455"}
+    console.log(pesertaBaru)
+
+    // 1. STRING & TEMPLATE LITERALS
+    const namaDepan = "susi";
+    const namaBelakang="Pujiastuti";
+    let literalscontoh=`
+    Nama Depan    : ${namaDepan}
+    Nama Belakang : ${namaBelakang}
+    `;
+    console.log(namaDepan +" "+ namaBelakang);
+    console.log(literalscontoh);
+
+    //Operator Aritmatika dan Assignment
+
+    let angkapertama = 1;
+    let angkakedua = 5;
+    console.log("Perkalian : " + angkapertama + "*" + angkakedua + "=" + parseInt(angkapertama * angkakedua));
+    console.log("Pembagian : " + angkapertama + "/" + angkakedua + "=" + angkapertama / angkakedua);
+
+    let a = 7;
+    a += 10; // a = a + 10 = 17
+    console.log(a);
+
+    //OPERATOR PERBANDINGAN & LOGIKA
+    let user= "admin"
+    let password = "12345678";
+
+    if (user=== "admin" && password=== "12345678") {
+        console.log("LOGIN SUKSES");
+    } else{
+        CONSOLE.LOG("Gagal");
+    }
+    console.log("5 > 10:", 5 > 10);//false
+    console.log("5 < 10:", 5 < 10);//true
+    let umur = 20;
+    if (umur >=17) {
+        console.log("Dewasa");
+    } else {
+        console.log("Bocil");
+    }
+    let tenaryyy = ( umur>= 17) ? "Dewasa" : "Bocil";
+    console.log(tenaryyy);
+    // Switch Case
+    const username = "admin"
+    switch (username) {
+        case "pimpinan":
+            console.log("ini pimpinan")
+            break;
+        case "Kasir":
+            console.log("ini kasir")
+            break;
+        case "ADMIN":
+            console.log("ini admin")
+            break;
+        default:
+            break;
+    }
+
+    //function 
+    function demoScope() {
+        if (true){
+        var varVariable = "saya var (Function Scope)";
+        let letVariable = "saya let (Block Scope)";
+        const constVariable = "Saya const (Block Scope)";
+    }
+    // console.log(varVariable);
+    // console.log(letVariable);
+    // console.log(constVariable);
+}
+demoScope();
+// Tradisional Function Expression (ES5)
+const squareES5 = function (x) {
+    return x * x;
+}
+console.log(squareES5(4));
+
+const squareES6 = (x) => {
+    return x * x;
+}
+console.log(squareES6(2));
+
+    // ARROW FUNCTION (ES6+) -IMPLICIT RETURN
+    const squareES6implicit = (x) => x * x;
+    console.log(squareES6implicit(5));
+
+    // Pengunaan pada method array
+    const fruits = ["apel", "nanas", "durian"];
+    const squareFruits = fruits.map((fruit)=> fruit);
+    console.log(squareFruits[1]);
+    //LOOPING FOR WHILE, DO.. WHILE..
+    for (let index = 1; index <5; index++) {
+        console.log( "Perulangan ke- " + index)
+    }
+    let no= 1;
+    while (no<= 5) {
+        console.log(`ini Nomor Ke-${no}`);
+        no++;
+    }
+    let x= 1;
+
+    do {
+        console.log(`Nilai x = ${x}`);
+        x++;
+    } while (x <= 5);
+</script>
+    
+</body>
+</html>
