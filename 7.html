@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <h1 id="title">Teks awal</h1>
+    <p id="description">Desription awal</p>
+    <p id="status">status awal</p>
+
+    <div id="modul"></div>
+    <ul id="modulul"></ul>
+
+    <script>
+        const body = document.body;
+        const title = document.getElementById('title')
+        const desc = document.getElementById('description')
+        const status = document.querySelector('#status')
+
+        body.style.backgroundColor ="blue";
+        title.style.color= "white";
+        title.innerText= "PPKD Jakarta Pusat"
+
+        desc.style.color= "white"
+        desc.innerText="Selamat Datang di PPKD Jakarta Pusat";
+
+        status.style.color="white";
+        status.innerText="Tersertifikasi BNSP";
+
+        const listunit=[
+            "Pria tampan solo",
+            "Meja Pria",
+        ];
+
+        //create element
+        const modul = document.getElementById('modul')
+        const modulul = document.getElementById('modulul')
+        //createElement():
+        listunit.forEach((unitText)=> {
+            const itemLi = document.createElement('li')
+
+            itemLi.innerText = unitText;
+            itemLi.style.marginBottom="8px";
+            
+            modulul.appendChild(itemLi);
+
+        })
+        const isiModul = document.createElement('p')
+        isiModul.innerText="Laravel adalah Framework php";
+        isiModul.style.color="white";
+
+        modul.appendChild(isiModul);
+
+
+    </script>
+    
+</body>
+</html>
