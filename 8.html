@@ -1,0 +1,56 @@
+<!-- event: kejadian , apa yang terjadi
+    onClick, onChange, onKeyup, onKeyDown
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM dan Event dalam Javascript</title>
+</head>
+
+<body>
+    <!-- elementTarget.addEventListener(); -->
+
+    <h1>Form Sapaan</h1>
+    <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+    <button id="simpan">Klik Saya</button><br><br>
+    <button id="hapus">Hapus Saya</button>
+    <p id="hasilSapaan">Nama Anda adalah : </p>
+
+    <script>
+        const heading = document.querySelector('h1')
+        const nama = document.querySelector('#nama')
+        const sapaan = document.querySelector('#hasilSapaan')
+        //function bisa dipakai berulang kali
+        function prosesSapaan() {
+            sapaan.innerText=`halo Nama : ${nama.value}`;
+            nama.value="";
+        }
+
+        document.getElementById('simpan').addEventListener('click', () => {
+            //alert('duarrrr motor nmax')
+            //heading.innerText = "PPKD Jakarta Pusat";
+            sapaan.innerText = `Nama Anda adalah : ${nama.value}`;
+        })
+
+        nama.addEventListener('keyup', function (event){
+         if(event.key =="enter"){
+            prosesSapaan();
+         }
+        })
+
+        document.getElementById('hapus').addEventListener('click', () => {
+            heading.innerText = "";
+        })
+
+
+    </script>
+
+    </script>
+    
+</body>
+</html>
